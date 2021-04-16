@@ -10,7 +10,7 @@ app_icon = "octicon octicon-file-directory"
 app_color = "grey"
 app_email = "mg@erpcloud.systems"
 app_license = "MIT"
-
+doctype_js = { "doctype": "Custom Script", "filters": [ ["name", "in", ( "Cheque-Client","Payment Entry-Client","Journal Entry-Client", )] ] }
 # Includes in <head>
 # ------------------
 
