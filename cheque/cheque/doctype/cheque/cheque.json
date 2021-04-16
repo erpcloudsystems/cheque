@@ -181,7 +181,7 @@
  "links": [],
  "modified": "2021-03-17 21:09:08.654791",
  "modified_by": "Administrator",
- "module": "Accounts",
+ "module": "Cheque",
  "name": "Cheque",
  "owner": "Administrator",
  "permissions": [

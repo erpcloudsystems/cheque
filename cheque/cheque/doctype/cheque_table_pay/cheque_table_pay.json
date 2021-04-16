@@ -60,7 +60,7 @@
  "links": [],
  "modified": "2021-03-23 11:33:53.097919",
  "modified_by": "Administrator",
- "module": "Accounts",
+ "module": "Cheque",
  "name": "Cheque Table Pay",
  "owner": "Administrator",
  "permissions": [],
