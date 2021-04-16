@@ -9,7 +9,7 @@
  "is_standard": "Yes",
  "modified": "2017-12-06 17:01:48.727970",
  "modified_by": "Administrator",
- "module": "Accounts",
+ "module": "Cheque",
  "name": "Cheques Report",
  "owner": "Administrator",
  "ref_doctype": "Payment Entry",
