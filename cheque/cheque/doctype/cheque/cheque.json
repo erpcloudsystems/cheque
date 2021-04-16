@@ -1,0 +1,204 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2021-01-19 16:29:36.283020",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "type_of_payment_section",
+  "naming_series",
+  "company",
+  "posting_date",
+  "payment_type",
+  "column_break_3",
+  "mode_of_payment",
+  "cheque_status",
+  "section_break_6",
+  "party_type",
+  "column_break_8",
+  "party",
+  "section_break_10",
+  "paid_from",
+  "column_break_12",
+  "paid_to",
+  "section_break_16",
+  "html_17",
+  "cheque_table",
+  "cheque_table_2",
+  "amended_from",
+  "default_company_accounts_section"
+ ],
+ "fields": [
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "in_standard_filter": 1,
+   "label": "Posting Date"
+  },
+  {
+   "fieldname": "payment_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Payment Type",
+   "options": "\nReceive\nPay"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "\u0634\u064a\u0643",
+   "fieldname": "mode_of_payment",
+   "fieldtype": "Link",
+   "label": "Mode Of Payment",
+   "options": "Mode of Payment",
+   "read_only": 1
+  },
+  {
+   "default": "\u062c\u062f\u064a\u062f",
+   "fieldname": "cheque_status",
+   "fieldtype": "Select",
+   "label": "Cheque Status",
+   "options": "\n\u062c\u062f\u064a\u062f\n\u0645\u0638\u0647\u0631\n\u062a\u062d\u062a \u0627\u0644\u062a\u062d\u0635\u064a\u0644\n\u0645\u062d\u0635\u0644\n\u0645\u0631\u0641\u0648\u0636\n\u0645\u0633\u062d\u0648\u0628\n\u0645\u0631\u062f\u0648\u062f\n\u0645\u062f\u0641\u0648\u0639",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break",
+   "label": "PARTY"
+  },
+  {
+   "fieldname": "party_type",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Party Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "party",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Party",
+   "options": "party_type"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break",
+   "label": "ACCOUNTS"
+  },
+  {
+   "fieldname": "paid_from",
+   "fieldtype": "Link",
+   "label": "Account Paid From",
+   "options": "Account"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "\u062d\u0627\u0641\u0638\u0629 \u0634\u064a\u0643\u0627\u062a - NS",
+   "fieldname": "paid_to",
+   "fieldtype": "Link",
+   "label": "Account Paid To",
+   "options": "Account"
+  },
+  {
+   "fieldname": "type_of_payment_section",
+   "fieldtype": "Section Break",
+   "label": "Type of Payment"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "CHQ-.YYYY.-"
+  },
+  {
+   "fieldname": "section_break_16",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.payment_type == \"Receive\"",
+   "fieldname": "cheque_table",
+   "fieldtype": "Table",
+   "label": "Cheque Table",
+   "mandatory_depends_on": "eval:doc.payment_type == \"Receive\"",
+   "options": "Cheque Table"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Cheque",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.payment_type == \"Pay\"",
+   "fieldname": "cheque_table_2",
+   "fieldtype": "Table",
+   "label": "Cheque Table",
+   "mandatory_depends_on": "eval:doc.payment_type == \"Pay\"",
+   "options": "Cheque Table Pay"
+  },
+  {
+   "fieldname": "html_17",
+   "fieldtype": "HTML"
+  },
+  {
+   "fieldname": "default_company_accounts_section",
+   "fieldtype": "Section Break",
+   "label": "Default Company Accounts"
+  },
+  {
+   "default": "New Star",
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2021-03-17 21:09:08.654791",
+ "modified_by": "Administrator",
+ "module": "Accounts",
+ "name": "Cheque",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
