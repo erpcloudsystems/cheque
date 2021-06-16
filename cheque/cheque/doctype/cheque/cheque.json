@@ -57,8 +57,7 @@
    "fieldname": "mode_of_payment",
    "fieldtype": "Link",
    "label": "Mode Of Payment",
-   "options": "Mode of Payment",
-   "read_only": 1
+   "options": "Mode of Payment"
   },
   {
    "default": "\u062c\u062f\u064a\u062f",
@@ -179,7 +178,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-03-17 21:09:08.654791",
+ "modified": "2021-06-14 19:02:25.008634",
  "modified_by": "Administrator",
  "module": "Cheque",
  "name": "Cheque",

@@ -17,16 +17,23 @@ frappe.query_reports["Cheques Report"] = {
 			"options":  ["جديد","مظهر","تحت التحصيل","محصل","مرفوض بالبنك","حافظة شيكات مرجعة","مردود","مدفوع","محصل فوري"]
 		},
 		{
+			"fieldname":"mode_of_payment",
+			"label": __("Mode of Payment"),
+			"fieldtype": "Select",
+			"options":  ["شيك","شيك ضمان","شيك امانات","شيك تسهيل"],
+			"default": "شيك"
+		},
+		{
 			"fieldname": "from_date",
 			"label": __("From Date"),
 			"fieldtype": "Date",
-			"default": frappe.defaults.get_user_default("year_start_date")
+
 		},
 		{
 			"fieldname": "to_date",
 			"label": __("To Date"),
 			"fieldtype": "Date",
-			"default": frappe.defaults.get_user_default("year_end_date")
+
 		},
 		{
 			"fieldname":"bank",
